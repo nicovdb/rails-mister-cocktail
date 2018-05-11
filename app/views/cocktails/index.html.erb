@@ -1,15 +1,23 @@
 <h1>List of cocktails</h1>
 <%= link_to "Add a new cocktail", new_cocktail_path %>
 
-<% @cocktails.each do |cocktail| %>
-  <p> <%= link_to cocktail.name, cocktail_path(cocktail)  %></p>
-<%end %>
-
-<!--
-<div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
-  <div class="card-description">
-    <h2>Le Wagon Shanghai</h2>
+<div class="container">
+  <div class="row">
+    <% @cocktails.each do |cocktail| %>
+      <div class="col-xs-12 col-sm-4">
+      <!-- insert <div class="card"> -->
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
+          <div class="card-description">
+            <h2><%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
+          </div>
+        </div>
+      </div>
+    <%end %>
   </div>
-  <a class="card-link" href="#" ></a>
 </div>
- -->
+
+
+
+
+
+
